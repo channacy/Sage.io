@@ -32,6 +32,9 @@ page_names = [page for page in pages.keys() if page != "/"]
 def menu_action(state, action, payload):
     page = payload["args"][0]
     navigate(state, page)
+    
+def on_change(state, var_name: str, var_value):
+    state['scenario'].on_change(state, var_name, var_value)
 
 if __name__ == "__main__":
     rest = Rest()
