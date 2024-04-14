@@ -17,5 +17,12 @@ Please refer to https://docs.taipy.io/en/latest/manuals/gui/pages for more detai
 """
 
 from taipy.gui import Markdown
+import requests 
+import pandas as pd
+from decouple import config
 
+canvas_api_url = "https://yourcanvasinstance.instructure.com"
+canvas_token = config('CANVAS_API_KEY')
+canvas_course_id = 9291105
 home = Markdown("pages/home/home.md")
+
