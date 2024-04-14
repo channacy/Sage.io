@@ -8,6 +8,10 @@
 # Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on
 # an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
 # specific language governing permissions and limitations under the License.
+
+# Code adapted from the official Taipy documentation
+# Source: https://docs.taipy.io/en/release-3.0/knowledge_base/tutorials/complete_application/step_01/step_01/
+
 import taipy as tp
 from taipy.gui import Gui, navigate
 
@@ -17,10 +21,10 @@ from pages import *
 
 pages = {
     "/": "<|menu|lov={page_names}|on_action=menu_action|>",
-    "home": home,
-	"analysis": analysis,
-	"feedback": feedback,
-	"performance": performance
+    "Sage-io": home,
+	"Analysis": analysis,
+	"GPT": feedback,
+	"Evaluation": performance
 }
 
 page_names = [page for page in pages.keys() if page != "/"]
